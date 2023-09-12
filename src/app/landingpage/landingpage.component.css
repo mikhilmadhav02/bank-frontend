@@ -1,0 +1,12 @@
+#section{
+    width: 100%;
+    height: 600px;
+}
+#image {
+    margin-left: -40px;
+    margin-top: 20px;
+    background-size: contain;
+    width: 850px;
+    height: 500px;
+   background-image: url('https://opengeekslab.com/wp-content/uploads/2021/06/Mobile-Banking-Trends-2021-Top-Insights-and-Features-to-Keep-in-Mind.png');
+}

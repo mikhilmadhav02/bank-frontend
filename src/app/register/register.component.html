@@ -1,0 +1,74 @@
+<!--  -->
+
+<header style="height: 100px; width: 100%;" >
+
+    <nav class="navbar bg-warning">
+        <div class="container-fluid">
+          <a style="margin-left:20px;" routerLink="" class="navbar-brand"><i class="fa-solid fa-building-columns fa-beat-fade" ></i> Union Bank</a>
+        </div>
+      </nav>
+
+</header>
+
+
+
+<!-- input boxes -->
+<marquee bgcolor="primary" behavior="" direction="">Welcome to Union bank</marquee>
+<section>
+
+<div class="row mt-4 ">
+    <div class="col-1"></div>
+    <div  class="col-4 mt-5 ">
+    <p style="margin-top:80px;margin-left:100px;">Aleady a User,Click below to Login</p>
+    <a style="margin-left: 100px;width:80px;height: 34px;display: flex;justify-content: center;align-items: center;" routerLink="/login" class="btn btn-primary" >Login</a>
+    </div>
+    <div style="margin-top:40px;" class="col-4">
+        <h3>Sign Up</h3>
+        <form [formGroup]="registerform" class="border p-3" (ngSubmit)="register()" >
+            <div class="mt-2" >
+                <input name="username" formControlName="username" placeholder="username:" class="form-control" type="">
+            </div>
+
+            <!-- validation -->
+            <div *ngIf="registerform.get('username')?.errors && registerform.get('username')?.touched" class="text-danger" >enter valid username</div>
+
+            <div class="mt-2" >
+                <input name="acno" formControlName="acno" placeholder="accountno:" class="form-control" type="">
+            </div>
+            <!-- validation -->
+            <div *ngIf="registerform.get('acno')?.errors && registerform.get('acno')?.touched" class="text-danger" >enter valid acno</div>
+
+            <div class="mt-2" >
+                <input name="pass" formControlName="pass" placeholder="password:" class="form-control" type="">
+            </div>
+            <!-- validation -->
+            <div *ngIf="registerform.get('pass')?.errors && registerform.get('pass')?.touched" class="text-danger" >enter correct password</div>
+
+            <div class="mt-4" >
+                <input style="display: flex;justify-content:center;width:95px;height:35px;align-items: center;" value="Register"  class="btn btn-success" type="submit">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
